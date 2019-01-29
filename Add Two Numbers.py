@@ -14,11 +14,11 @@ class Solution:
         num1 = str()
         num2 = str()
         
-        while l1 is not None:
+        while l1 != None:
             num1 += str(l1.val)
             l1 = l1.next
             
-        while l2 is not None:
+        while l2 != None:
             num2 += str(l2.val)
             l2 = l2.next
             
