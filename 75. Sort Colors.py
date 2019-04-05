@@ -5,8 +5,7 @@ class Solution:
         """
         red, white = 0, 0
         
-        for idx in range(len(nums)):
-            color = nums[idx]
+        for idx, color in enumerate(nums):
             nums[idx] = 2
             
             if color < 2:
