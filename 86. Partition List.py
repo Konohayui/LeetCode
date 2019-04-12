@@ -19,8 +19,9 @@ class Solution:
                 
             else:
                 right.next = head
-                right = right.next
-                
+                right = right.next    
+            head = head.next
+
         right.next = None
         left.next = right_head.next
         
