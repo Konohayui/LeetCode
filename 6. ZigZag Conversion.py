@@ -14,9 +14,11 @@ class Solution:
         
         for idx in range(s_len):
             temp_pos = idx % (2*numRows - 2)
-            if temp_pos < numRows:
-                zig_zag[temp_pos] += s[idx]
-            else:
-                zig_zag[2*numRows - 2 - temp_pos] += s[idx]
+            pos = temp_pos if temp_pos < numRows else 2*numRows - 2 - temp_pos
+            # if temp_pos < numRows:
+            #     zig_zag[temp_pos] += s[idx]
+            # else:
+            #     zig_zag[2*numRows - 2 - temp_pos] += s[idx]
+            zig_zag[pos] += s[idx]
         
         return "".join(zig_zag)
