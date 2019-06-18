@@ -47,4 +47,23 @@ class Solution:
         return longest_sub_len
     
     
-    
+"""
+much better solution
+"""
+class Solution:
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        used_char = {}
+        maxlen = 0
+        start = 0
+        
+        for i, c in enumerate(s):
+            if c in used_char and used_char[c] >= start:
+                start = used_char[c] + 1
+            used_char[c] = i
+            maxlen = max(i - start + 1, maxlen)
+        return maxlen
+        
